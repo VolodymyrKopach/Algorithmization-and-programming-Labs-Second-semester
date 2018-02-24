@@ -1,6 +1,8 @@
 public class Room {
     private String colorOfTheRoom;
-    private double height, width, length;
+    private double height;
+	private double width;
+	private double length;
     private int numberOfWindows;
     public static double volume = 0;
 

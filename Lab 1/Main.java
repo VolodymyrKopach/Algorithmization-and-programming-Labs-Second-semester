@@ -1,22 +1,22 @@
 public class Main {
 
     public static void main(String[] args) {
-        Room Bedroom = new Room();
-        Room Kitchen = new Room("white", 2.5, 3.8, 4.2);
-        Room LivingRoom = new Room("green", 3, 4.4, 5.8, 1);
+        Room bedroom = new Room();
+        Room kitchen = new Room("white", 2.5, 3.8, 4.2);
+        Room livingRoom = new Room("green", 3, 4.4, 5.8, 1);
 
-        System.out.println("\n" + Bedroom.toString());
-        System.out.println("\n" + Kitchen.toString());
-        System.out.println("\n" + LivingRoom.toString());
+        System.out.println("\n" + bedroom.toString());
+        System.out.println("\n" + kitchen.toString());
+        System.out.println("\n" + livingRoom.toString());
 
-        Bedroom.printSum();
-        Bedroom.printStaticSum();
+        bedroom.printSum();
+        bedroom.printStaticSum();
 
-        Kitchen.printSum();
-        Kitchen.printStaticSum();
+        kitchen.printSum();
+        kitchen.printStaticSum();
 
-        LivingRoom.printSum();
-        LivingRoom.printStaticSum();
+        livingRoom.printSum();
+        livingRoom.printStaticSum();
 
     }
 }
