@@ -4,10 +4,12 @@ public class Accommodation {
     private double area;
     private Location location = new Location();
 
-    public Accommodation(int numberOfRooms, double price, double area) {
+    public Accommodation(int numberOfRooms, double price, double area, double latitude, double height,
+                         double longitude) {
         this.numberOfRooms = numberOfRooms;
         this.price = price;
         this.area = area;
+        this.setLocation(latitude, height, longitude);
     }
 
     @Override

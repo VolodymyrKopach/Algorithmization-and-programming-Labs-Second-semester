@@ -3,9 +3,8 @@ public class Penthouse extends Accommodation {
 
     public Penthouse(boolean basin, int numberOfRooms, double price, double area, double latitude, double height,
                      double longitude) {
-        super(numberOfRooms, price, area);
+        super(numberOfRooms, price, area, latitude, height, longitude);
         this.basin = basin;
-        setLocation(latitude, height, longitude);
     }
 
     @Override

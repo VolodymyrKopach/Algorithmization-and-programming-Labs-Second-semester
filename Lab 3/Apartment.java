@@ -3,9 +3,8 @@ public class Apartment extends Accommodation {
 
     public Apartment(int floorOfHouse, int numberOfRooms, double price, double area, double latitude, double height,
                      double longitude) {
-        super(numberOfRooms, price, area);
+        super(numberOfRooms, price, area, latitude, height, longitude);
         this.floorOfHouse = floorOfHouse;
-        setLocation(latitude, height, longitude);
     }
 
     @Override
