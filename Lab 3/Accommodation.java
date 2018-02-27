@@ -4,6 +4,12 @@ public class Accommodation {
     private double area;
     private Location location = new Location();
 
+    public Accommodation(int numberOfRooms, double price, double area) {
+        this.numberOfRooms = numberOfRooms;
+        this.price = price;
+        this.area = area;
+    }
+
     @Override
     public String toString() {
         return "\n\nAccommodation:" +

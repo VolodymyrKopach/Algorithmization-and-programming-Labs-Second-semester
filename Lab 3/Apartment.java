@@ -1,12 +1,10 @@
-public class Apartment extends Accommodation{
+public class Apartment extends Accommodation {
     private int floorOfHouse;
 
     public Apartment(int floorOfHouse, int numberOfRooms, double price, double area, double latitude, double height,
                      double longitude) {
+        super(numberOfRooms, price, area);
         this.floorOfHouse = floorOfHouse;
-        this.setNumberOfRooms(numberOfRooms);
-        this.setPrice(price);
-        this.setArea(area);
         setLocation(latitude, height, longitude);
     }
 

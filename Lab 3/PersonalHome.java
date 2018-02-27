@@ -3,10 +3,8 @@ public class PersonalHome extends Accommodation{
 
     public PersonalHome(int numberOfFloors, int numberOfRooms, double price, double area, double latitude, double height,
                         double longitude) {
+        super(numberOfRooms, price, area);
         this.numberOfFloors = numberOfFloors;
-        this.setNumberOfRooms(numberOfRooms);
-        this.setPrice(price);
-        this.setArea(area);
         setLocation(latitude, height, longitude);
     }
 
