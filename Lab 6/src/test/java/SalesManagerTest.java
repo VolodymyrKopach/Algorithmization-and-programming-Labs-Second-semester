@@ -1,41 +1,55 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.Assert.*;
 
 public class SalesManagerTest {
-    SalesManager salesManager = new SalesManager();
-    List<Accommodation> accommodationList = new ArrayList<Accommodation>();
-    Apartment apartment = new Apartment(2, 4, 600, 67, 300, 23, 89);
+    SalesManager salesManager = null;
+    List<Accommodation> accommodationList = null;
+
+
+    @Before
+    public void setup() {
+        salesManager = new SalesManager();
+        accommodationList = new ArrayList<Accommodation>();
+        accommodationList.add(new Apartment(2, 4, 600, 67, 300, 23, 89));
+        accommodationList.add(new Penthouse(true, 4, 900, 67, 300, 23, 89));
+        accommodationList.add(new PersonalHome(2, 4, 300, 67, 300, 23, 89));
+    }
 
     @Test
     public void findByPriceTest() {
-        accommodationList.add(apartment);
-        assertEquals(600, salesManager.findByPrice(accommodationList,
-                1000).get(0).getPrice(), 0.0000001);
-
+        double findPrice = 800;
+        List<Accommodation> foundAccomodationList = salesManager.findByPrice(accommodationList, findPrice);
+        for (Accommodation accommodation : foundAccomodationList) {
+            if (accommodation.getPrice() < findPrice) {
+                assertTrue(true);
+            }
+        }
     }
 
     @Test
     public void findByDistanceTest() {
-        accommodationList.add(apartment);
-        assertEquals(300, salesManager.findByDistance(accommodationList, ListLocationOfSIO.SCHOOL,
-                100).get(0).getLocation().getLatitude(), 0.0000001);
+        double findDistance = 100;
+        List<Accommodation> foundAccomodationList = salesManager.findByDistance(accommodationList, ListLocationOfSIO.SCHOOL, findDistance);
+        for (Accommodation accommodation : foundAccomodationList) {
+            if (accommodation.getLocation().getLatitude() - ListLocationOfSIO.SCHOOL.getLatitude() < findDistance) {
+                assertTrue(true);
+            }
+        }
     }
 
     @Test
     public void sortAccomodationByPriceTest() {
-    }
-
-    @Test
-    public void getAccommodationListTest() {
-    }
-
-    @Test
-    public void setAccommodationListTest() {
-
+        salesManager.sortAccomodationByPrice(accommodationList);
+        double priceOfThePreviousOneInList = 0;
+        for (Accommodation accommodation : accommodationList) {
+            if (accommodation.getPrice() > priceOfThePreviousOneInList){
+                assertTrue(true);
+            }
+        }
     }
 }

@@ -1,9 +1,15 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class LocationTest {
-    Location location = new Location();
+    Location location = null;
+
+    @Before
+    public void setup() {
+        location = new Location();
+    }
 
     @Test
     public void setLocationTest() {

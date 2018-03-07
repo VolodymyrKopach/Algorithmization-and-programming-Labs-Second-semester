@@ -1,5 +1,5 @@
 public enum ListLocationOfSIO {
-    SCHOOL(2, 3, 10), KINDERGARTEN(4, 8, 72), CLINIC(9, 12, 34);
+    SCHOOL(2, 3, 10);
 
     private double latitude;
     private double height;

@@ -1,9 +1,15 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class PersonalHomeTest {
-    PersonalHome personalHome = new PersonalHome(5, 4, 100, 100, 8, 9, 3);
+    PersonalHome personalHome = null;
+
+    @Before
+    public void setup() {
+        personalHome = new PersonalHome(5, 4, 100, 100, 8, 9, 3);
+    }
 
     @Test
     public void toStringTest() {

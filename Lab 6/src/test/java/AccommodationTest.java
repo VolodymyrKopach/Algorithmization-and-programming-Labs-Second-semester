@@ -1,9 +1,15 @@
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AccommodationTest {
-    Accommodation accommodation = new Accommodation(1, 200, 100, 3, 8, 9);
+    Accommodation accommodation = null;
 
+
+    @Before
+    public void setup() {
+        accommodation = new Accommodation(1, 200, 100, 3, 8, 9);
+    }
 
     @Test
     public void toStringTest() {

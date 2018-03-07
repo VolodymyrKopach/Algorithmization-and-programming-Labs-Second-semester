@@ -1,9 +1,17 @@
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
 public class ApartmentTest {
-    Apartment apartment = new Apartment(2, 4, 100, 100, 8, 9, 3);
+    Apartment apartment = null;
+
+    @Before
+    public void setup() {
+        apartment = new Apartment(2, 4, 100, 100, 8, 9, 3);
+    }
 
     @Test
     public void toStringTest() {

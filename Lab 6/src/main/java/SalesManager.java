@@ -31,8 +31,4 @@ public class SalesManager {
     public void sortAccomodationByPrice(List<Accommodation> accommodations) {
         accommodations.sort(Comparator.comparing(Accommodation::getPrice));
     }
-
-    public List<Accommodation> getAccommodationList() {
-        return accommodationList;
-    }
 }
