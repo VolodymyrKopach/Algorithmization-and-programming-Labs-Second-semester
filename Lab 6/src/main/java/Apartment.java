@@ -24,4 +24,13 @@ public class Apartment extends Accommodation {
     public void setFloorOfHouse(int floorOfHouse) {
         this.floorOfHouse = floorOfHouse;
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + ", " + "floor of house";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + getFloorOfHouse();
+    }
+
 }

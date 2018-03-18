@@ -37,13 +37,13 @@ public class ApartmentTest {
     @Test
     public void getNumberOfRoomsTest() {
         apartment.setNumberOfRooms(1);
-        assertEquals(1,apartment.getNumberOfRooms());
+        assertEquals(1, apartment.getNumberOfRooms());
     }
 
     @Test
     public void setNumberOfRoomsTest() {
         apartment.setNumberOfRooms(1);
-        assertEquals(1,apartment.getNumberOfRooms());
+        assertEquals(1, apartment.getNumberOfRooms());
     }
 
     @Test

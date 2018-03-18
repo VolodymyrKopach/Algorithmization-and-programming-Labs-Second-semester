@@ -25,4 +25,13 @@ public class PersonalHome extends Accommodation {
     public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + ", " + "number of floors";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + getNumberOfFloors();
+    }
+
 }

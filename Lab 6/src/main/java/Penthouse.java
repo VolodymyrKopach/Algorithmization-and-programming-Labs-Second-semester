@@ -25,5 +25,13 @@ public class Penthouse extends Accommodation {
         this.basin = basin;
     }
 
+    public String getHeaders() {
+        return super.getHeaders() + ", " + "basin";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + isBasin();
+    }
+
 
 }

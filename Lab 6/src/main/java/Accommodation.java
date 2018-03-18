@@ -20,11 +20,21 @@ public class Accommodation {
                 + "\narea = " + area;
     }
 
+    public String getHeaders() {
+        return "Accommodation:" + "number of rooms" + ", " + "price" + ", " + "area" + ", " + "location";
+    }
+
+    public String toCSV() {
+        return "Accommodation:" + numberOfRooms + ", " + price
+                + ", " + area + ", " + "(" + location.getLatitude() + ", "
+                + location.getHeight() + ", " + location.getLongitude() + ")";
+    }
+
     public int getNumberOfRooms() {
         return numberOfRooms;
     }
 
-    public void setNumberOfRooms(int numberOfRooms) {
+    public void  setNumberOfRooms(int numberOfRooms) {
         this.numberOfRooms = numberOfRooms;
     }
 

@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class AccommodationTest {
@@ -22,13 +23,13 @@ public class AccommodationTest {
     @Test
     public void getNumberOfRoomsTest() {
         accommodation.setNumberOfRooms(1);
-        assertEquals(1,accommodation.getNumberOfRooms());
+        assertEquals(1, accommodation.getNumberOfRooms());
     }
 
     @Test
     public void setNumberOfRoomsTest() {
         accommodation.setNumberOfRooms(1);
-        assertEquals(1,accommodation.getNumberOfRooms());
+        assertEquals(1, accommodation.getNumberOfRooms());
     }
 
     @Test

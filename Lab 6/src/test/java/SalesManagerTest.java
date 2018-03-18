@@ -47,7 +47,7 @@ public class SalesManagerTest {
         salesManager.sortAccomodationByPrice(accommodationList);
         double priceOfThePreviousOneInList = 0;
         for (Accommodation accommodation : accommodationList) {
-            if (accommodation.getPrice() > priceOfThePreviousOneInList){
+            if (accommodation.getPrice() > priceOfThePreviousOneInList) {
                 assertTrue(true);
             }
         }
